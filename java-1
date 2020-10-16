@@ -2,38 +2,39 @@
 
 
 //包
-package club.banyuan.classDef;
+  package club.banyuan.classDef;
 
 
 //定义
 //类的名字是Pet 需要与文件名中的Pet.java同名
-  public class Pet {
-  String name;   String color;   int age;
-  }
+  public class Pet    {String name;   String color;   int age; }
 
 
 //构造方法
 //两个不同的构造方法，这里用到了方法重载
-	public Pet(String aName, String aColor, int aAge) {
-		name = aName; color = aColor;   age = aAge;    	}
-	public Pet() {
-		name = "Amy";  color = "white";  	age = 1;      }
+  public Pet(String aName, String aColor, int aAge)   {name = aName; color = aColor;   age =   aAge;  }
+  public Pet()                                        {name = "Amy";  color = "white"; age = 1;     }
   
   
-  //重写toString方法以便格式化输出
-	public String toString() {
-		return "name=" + name + " color=" + color + " age=" + age;   }
+//重写toString方法以便格式化输出
+  public String toString()    {return "name=" + name + " color=" + color + " age=" + age;   }
  
- 
-	public static void main(String[] args) {
+
+
+
+//最后输出的地方
+  static void storeElephant(Fridge fridge, Elephant elephant) {}
+  static void storeElephant(Fridge fridge, Lion lion) {}
+  
+  public static void main(String[] args) {
 		// 使用不同的构造方法初始化对象，程序会根据参数的不同选择正确的构造方法
 		Pet pet1 = new Pet("Jack", "black", 2);
 		Pet pet2 = new Pet();
+		
 		// 打印查看結果，注意：如果沒有重写toString方法，直接打印对象不能打印出对象的状态。
-        //打印一个对象的时候，会自动调用该对象的toString()方法
+                //打印一个对象的时候，会自动调用该对象的toString()方法
 		System.out.println(pet1);    //等价于System.out.println(pet1.toStrng());
-		System.out.println(pet2);
-	}
+		System.out.println(pet2); }
  
 }
 
